@@ -8,13 +8,15 @@ Widget field(String str){
 }
 Widget data(String str){
   return Container(
+              height:35,
+              width: 50,
               decoration: BoxDecoration(
                 border: Border.all(),
                 color:Colors.white,
               ),              
               child : Padding(
               padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text(str, style: TextStyle(fontSize:25),),),);
+              child:Text(str, style: TextStyle(fontSize:25),textAlign: TextAlign.center,),),);
 }
 Column fields(){
   return Column(
@@ -60,15 +62,14 @@ class _MyHomePageState extends State<MyHomePage> {
       children: <Widget>[        
         fields(),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
           children:<Widget>[            
             data("67"),
               SizedBox(height: 10),
-            data("03"),
+            data("3"),
               SizedBox(height: 10),
-            data("01"),
+            data("1"),
               SizedBox(height: 10),
-            data("05"),
+            data("5"),
               SizedBox(height: 10),],),
           ],
         ),],),
@@ -84,11 +85,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children:<Widget>[            
             data("68"),
               SizedBox(height: 10),
-            data("03"),
+            data("3"),
               SizedBox(height: 10),
-            data("03"),
+            data("3"),
               SizedBox(height: 10),
-            data("03"),
+            data("3"),
               SizedBox(height: 10),],),
           ],
         ),
