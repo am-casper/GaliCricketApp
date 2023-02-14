@@ -207,8 +207,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         
-        leading: SvgPicture.asset(
-        "assets/iconofapp.svg"),
+        leading: Image.asset(
+        "assets/iconofapp.png"),
         backgroundColor: Colors.transparent,
         elevation: 0,
 
