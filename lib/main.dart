@@ -1,224 +1,110 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-
+Widget field(String str){
+  return Container(              
+              child : Padding(
+              padding: EdgeInsets.fromLTRB(5,5,5,5),
+              child:Text(str, style: TextStyle(fontSize:25),),),);
+}
+Widget data(String str){
+  return Container(
+              decoration: BoxDecoration(
+                border: Border.all(),
+                color:Colors.white,
+              ),              
+              child : Padding(
+              padding: EdgeInsets.fromLTRB(5,5,5,5),
+              child:Text(str, style: TextStyle(fontSize:25),),),);
+}
+Column fields(){
+  return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:<Widget>[
+            field("Runs"),
+              SizedBox(height: 10),
+            field("Widgets"),
+              SizedBox(height: 10),
+            field("Sixes"),
+              SizedBox(height: 10),
+            field("Fours"),
+              SizedBox(height: 10),
+          ],
+        );
+}
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gali Cricket',
-      theme: ThemeData(
-        
+      theme: ThemeData(        
       ),
       home: const MyHomePage(title: 'GaliCricket'),
     );
   }
 }
-
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  
+  const MyHomePage({super.key, required this.title});  
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
-class _MyHomePageState extends State<MyHomePage> {
-  
-  
+class _MyHomePageState extends State<MyHomePage> {    
   final left  =  Container(
     child:  Column(
     children:<Widget>[Text("Team A", style: TextStyle(fontSize:35),),
-    Row(
-      
-      children: <Widget>[
-        
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:<Widget>[
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Runs:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Wickets:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Sixes:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Fours:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-          ],
-        ),
+    Row(      
+      children: <Widget>[        
+        fields(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
-          children:<Widget>[
-            
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              // color:Colors.white,
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("67", style: TextStyle(fontSize:25),),),),
+          children:<Widget>[            
+            data("67"),
               SizedBox(height: 10),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("03", style: TextStyle(fontSize:25),),),),
+            data("03"),
               SizedBox(height: 10),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("01", style: TextStyle(fontSize:25),),),),
+            data("01"),
               SizedBox(height: 10),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("05", style: TextStyle(fontSize:25),),),),
+            data("05"),
               SizedBox(height: 10),],),
           ],
         ),],),
-  );
-    
+  );    
   final right  =  Container(
     child:  Column(
     children:<Widget>[Text("Team B", style: TextStyle(fontSize:35),),
-    Row(
-      
-      children: <Widget>[
-        
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:<Widget>[
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Runs:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Wickets:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Sixes:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-            Container(
-              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("Fours:", style: TextStyle(fontSize:25),),),),
-              SizedBox(height: 10),
-          ],
-        ),
+    Row(      
+      children: <Widget>[        
+        fields(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
-          children:<Widget>[
-            
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("68", style: TextStyle(fontSize:25),),),),
+          children:<Widget>[            
+            data("68"),
               SizedBox(height: 10),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("03", style: TextStyle(fontSize:25),),),),
+            data("03"),
               SizedBox(height: 10),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("03", style: TextStyle(fontSize:25),),),),
+            data("03"),
               SizedBox(height: 10),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(),
-                color:Colors.white,
-              ),
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text("03", style: TextStyle(fontSize:25),),),),
+            data("03"),
               SizedBox(height: 10),],),
           ],
         ),
       ],
     ),
   );
-
   @override
-  Widget build(BuildContext context) {
-    
+  Widget build(BuildContext context) {    
     return Scaffold(
-      appBar: AppBar(
-        
+      appBar: AppBar(        
         leading: Image.asset(
         "assets/iconofapp.png"),
         backgroundColor: Colors.transparent,
-        elevation: 0,
-
-
-     
-        
+        elevation: 0,             
         title: Text(widget.title, style: TextStyle(
-              color: Colors.black,),),
-        
-
+              color: Colors.black,),),        
       ),
       body:  Container(
         child:Padding(
@@ -227,17 +113,13 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
            Container(
-            width:350, 
-        
+            width:350,         
         child:  Align(
-      alignment: Alignment.topCenter,
-      
-        
+      alignment: Alignment.topCenter,              
         child: Container(
          decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(20),color: Colors.grey[100],
-  ),
-          
+  ),      
         height: 250,
         width:350,
         child:Padding(
@@ -251,7 +133,6 @@ class _MyHomePageState extends State<MyHomePage> {
             right,
           ],
         ),
-
         ),
       ),),),
       Container(
@@ -271,17 +152,14 @@ class _MyHomePageState extends State<MyHomePage> {
         side: BorderSide(width: 3, color: Colors.black),
       ),
     ),
-    ),
-    
-        child: Text('     Back to Home Page     ',
-        
+    ),    
+        child: Text('     Back to Home Page     ',        
         style: TextStyle(fontSize:30),),
               onPressed: () {
               },
       ),),
       ],),),
-      ),
-     
+      ),     
     );
   }
 }
