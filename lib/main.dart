@@ -127,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
       alignment: Alignment.topCenter,              
         child: Container(
          decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(20),color: Colors.grey[100],
+    borderRadius: BorderRadius.circular(20),color: Colors.grey[200],
   ),      
         
         child:Padding(
