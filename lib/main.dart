@@ -121,8 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
          decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(20),color: Colors.grey[100],
   ),      
-        height: 250,
-        width:350,
+        
         child:Padding(
           padding: EdgeInsets.fromLTRB(10,10,10,10),
         child:  Row(
