@@ -107,7 +107,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title, style: TextStyle(
               color: Colors.black,),),        
       ),
-      body:  Container(
+      body:  Center(
+        child: Container(
         child:Padding(
         padding: EdgeInsets.only(top: 16.0),
         child: Column(
@@ -159,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
       ),),
       ],),),
-      ),     
+      ), ),    
     );
   }
 }
