@@ -1,27 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 Widget field(String str){
-  return Container(              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text(str, style: TextStyle(fontSize:25),),),);
+  return Container(     
+    
+              decoration:BoxDecoration(
+                
+               
+              ),         
+              
+              child:Text(str, style: TextStyle(fontSize:25),textAlign:TextAlign.center),);
 }
 Widget data(String str){
   return Container(
-              height:35,
+              
               width: 50,
               decoration: BoxDecoration(
                 border: Border.all(),
                 color:Colors.white,
+                borderRadius:BorderRadius.circular(5),
               ),              
-              child : Padding(
-              padding: EdgeInsets.fromLTRB(5,5,5,5),
-              child:Text(str, style: TextStyle(fontSize:25),textAlign: TextAlign.center,),),);
+              
+              child:Text(str, style: TextStyle(fontSize:25),textAlign: TextAlign.center,),);
 }
 Column fields(){
   return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:<Widget>[
+              
             field("Runs"),
               SizedBox(height: 10),
             field("Widgets"),
@@ -61,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Row(      
       children: <Widget>[        
         fields(),
+        SizedBox(width:10),
         Column(
           children:<Widget>[            
             data("67"),
@@ -80,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Row(      
       children: <Widget>[        
         fields(),
+        SizedBox(width:10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children:<Widget>[            
@@ -142,6 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
         margin: const EdgeInsets.fromLTRB(70, 0, 70, 0),
         child: Image.asset("assets/trophy.png"),),
       Container(
+        width:double.infinity,
         margin: const EdgeInsets.fromLTRB(30, 0, 30, 0),
         child: ElevatedButton(
           style: ButtonStyle(
@@ -154,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     ),
     ),    
-        child: Text('     Back to Home Page     ',        
+        child: Text('Back to Home Page',        
         style: TextStyle(fontSize:30),),
               onPressed: () {
               },
